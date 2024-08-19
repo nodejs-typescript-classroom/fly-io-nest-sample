@@ -35,3 +35,15 @@ fly auth login
 ```shell
 fly launch --now
 ```
+
+3. check deploy status
+```shell
+fly logs
+```
+![fly-logs](fly-logs.png)
+
+4. check deploy machine
+```shell
+fly status
+```
+![fly-status](fly-status.png)
