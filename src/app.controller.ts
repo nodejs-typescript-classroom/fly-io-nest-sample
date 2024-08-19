@@ -1,16 +1,17 @@
 import { Controller, Get } from '@nestjs/common';
 import { AppService } from './app.service';
 import { AppResponseDto } from './app.dto';
-import { ApiCreatedResponse } from '@nestjs/swagger';
+import { ApiResponse } from '@nestjs/swagger';
 
 @Controller()
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get()
-  @ApiCreatedResponse({
+  @ApiResponse({
     type: AppResponseDto,
-    description: 'message'
+    description: 'message',
+    status: 200
   })
   getHello(): AppResponseDto {
     return {
