@@ -23,3 +23,15 @@ RUN pnpm install --production && npm uninstall -g pnpm
 USER node
 ENTRYPOINT [ "node", "./dist/main" ]
 ```
+
+## how to deploy to fly io
+
+1. login
+```shell
+fly auth login
+```
+
+2. launch
+```shell
+fly launch --now
+```
